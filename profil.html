@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Mahasiswa - Irsalina Assofia</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eaf3ff;
+      color: #243247;
+      margin: 0;
+      padding: 30px 15px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px #00000020;
+    }
+
+    header {
+      background: #1769aa;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+    }
+
+    .content {
+      padding: 25px;
+    }
+
+    h2 {
+      color: #1769aa;
+      border-bottom: 2px solid #eaf3ff;
+      padding-bottom: 8px;
+    }
+
+    .data {
+      background: #f4f8fd;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    .label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    footer {
+      text-align: center;
+      background: #f4f8fd;
+      padding: 15px;
+      color: #63748a;
+    }
+  </style>
+</head>
+
+<body><nav style="background:#0756a5; padding:15px; text-align:center;">
+    <a href="index.html" style="color:white; margin:10px;">Beranda</a>
+    <a href="profil.html" style="color:white; margin:10px;">Profil</a>
+    <a href="peta-qgis.html" style="color:white; margin:10px;">Peta QGIS</a>
+    <a href="pengelolaan-sampah.html" style="color:white; margin:10px;">Pengelolaan Sampah</a>
+    <a href="phbs.html" style="color:white; margin:10px;">PHBS</a>
+</nav>
+  <div class="container">
+    <header>
+      <h1>Irsalina Assofia</h1>
+      <p>Profil Mahasiswa</p>
+    </header>
+
+    <div class="content">
+      <h2>Tentang Saya</h2>
+      <p>
+        Halo, saya Irsalina Assofia. Saya mahasiswa dari
+        Program Studi Kesehatan Lingkungan dengan NIM
+        D12.2025.00340, Fakultas Kesehatan,
+        Universitas Dian Nuswantoro Semarang.
+      </p>
+
+      <h2>Data Diri</h2>
+
+      <div class="data">
+        <span class="label">Nama Lengkap</span>
+        Irsalina Assofia
+      </div>
+
+      <div class="data">
+        <span class="label">NIM</span>
+        D12.2025.00340
+      </div>
+
+      <div class="data">
+        <span class="label">Tempat, Tanggal Lahir</span>
+        Tanjung Enim, 23 Desember 2001
+      </div>
+
+      <div class="data">
+        <span class="label">Umur</span>
+        <span id="umur"></span>
+      </div>
+
+      <div class="data">
+        <span class="label">Program Studi</span>
+        Kesehatan Lingkungan
+      </div>
+
+      <div class="data">
+        <span class="label">Fakultas</span>
+        Fakultas Kesehatan
+      </div>
+
+      <div class="data">
+        <span class="label">Universitas</span>
+        Universitas Dian Nuswantoro Semarang
+      </div>
+
+      <div class="data">
+        <span class="label">Alamat</span>
+        Jln. Lintas Sumatera, Desa Arahan,
+        Kecamatan Merapi Timur, Kabupaten Lahat
+      </div>
+    </div>
+
+    <footer>
+      Website Profil Mahasiswa &copy; 2026
+    </footer>
+  </div>
+
+  <script>
+    const lahir = new Date(2001, 12, 23);
+    const sekarang = new Date();
+
+    let umur = sekarang.getFullYear() - lahir.getFullYear();
+
+    if (
+      sekarang.getMonth() < lahir.getMonth() ||
+      (sekarang.getMonth() === lahir.getMonth() &&
+       sekarang.getDate() < lahir.getDate())
+    ) {
+      umur--;
+    }
+
+    document.getElementById("umur").textContent =
+      umur + " tahun";
+  </script>
+</body>
+</html>
